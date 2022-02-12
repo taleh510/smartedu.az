@@ -1,9 +1,12 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<?php include('header.php');
+<?php
+include 'header.php';
 
+if (empty($_SESSION['mail0'])) {
+    header("location: index");
+}
 $esorus = $db->prepare("SELECT * FROM se_exam");
 $esorus->execute();
-$ecek = $esorus->fetch(PDO::FETCH_ASSOC);
+//$ecek = $esorus->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container">
@@ -36,13 +39,14 @@ $ecek = $esorus->fetch(PDO::FETCH_ASSOC);
 if (isset($_GET['axtar'])) {
     $kserc = $_GET['kserc'];
     $nserc = $_GET['nserc'];
-    if ($kserc == "Kateqoriya" and $nserc == "Nəşriyyatçı") {
+    $axtar = $_GET['axtar'];
+    if ($kserc == "Kateqoriya" and $nserc == "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam");
-    } elseif ($kserc != "Kateqoriya" and $nserc != "Nəşriyyatçı") {
+    } elseif ($kserc != "Kateqoriya" and $nserc != "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where nesriyyatci like '%$nserc%' and kateqoriya like '%$kserc%' ");
-    } elseif ($kserc != "Kateqoriya" and $nserc == "Nəşriyyatçı") {
+    } elseif ($kserc != "Kateqoriya" and $nserc == "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where kateqoriya like '%$kserc%' ");
-    } elseif ($kserc == "Kateqoriya" and $nserc != "Nəşriyyatçı") {
+    } elseif ($kserc == "Kateqoriya" and $nserc != "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where nesriyyatci like '%$nserc%' ");
     }
     $exsorus->execute();
@@ -51,9 +55,6 @@ if (isset($_GET['axtar'])) {
     <section id="Exam">
         <div class="container">
             <div class="row my-5">
-                <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <a href="exam-info">
-                        <div class="exam-card"> -->
                 <div class="row mb-2 exam-top">
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="total-number">
@@ -74,13 +75,13 @@ if (isset($_GET['axtar'])) {
                         <?php while ($ecek = $exsorus->fetch(PDO::FETCH_ASSOC)) { ?>
 
                             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                                <a href="exam-info">
+                                <a href="exam-info?e_id=<?php echo $ecek['e_id']; ?>">
                                     <div class="exam-card">
                                         <div class="exam-card-img">
                                             <img src='./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png' alt=''>
                                         </div>
                                         <div class="price-line">
-                                            <span>Ödəniş <strong><?php echo $ecek['qiymet']; ?> AZN</strong> </span>
+                                            <span>Ödəniş: <strong><?php echo $ecek['qiymet']; ?> AZN</strong> </span>
                                         </div>
                                         <div class="exam-card-footer">
                                             <strong> <?php echo $ecek['basliq']; ?></strong>
@@ -95,7 +96,7 @@ if (isset($_GET['axtar'])) {
 
                         <?php }
                     } else {
-                        $exsorus = $db->prepare("SELECT * FROM se_exam ORDER BY qeydiyyat ASC
+                        $exsorus = $db->prepare("SELECT * FROM se_exam ORDER BY qeydiyyat Desc
                         LIMIT 3");
                         $exsorus->execute(); ?>
                         <section id="Exam">
@@ -107,8 +108,7 @@ if (isset($_GET['axtar'])) {
                                     <div class="row mb-2 exam-top">
                                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                                             <div class="total-number">
-                                                <span>Ümumi imtahan sayı: <?php //echo $say 
-                                                                            ?> </span>
+                                                <!-- <span>Ümumi imtahan sayı:</span> -->
                                             </div>
                                         </div>
 
@@ -123,21 +123,20 @@ if (isset($_GET['axtar'])) {
                                     <div class="container">
                                         <div class="row my-5">
                                             <?php while ($ecek = $exsorus->fetch(PDO::FETCH_ASSOC)) { ?>
-
                                                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                                                    <a href="exam-info">
+                                                    <a href="exam-info?e_id=<?php echo $ecek['e_id'] ?>">
                                                         <div class="exam-card">
                                                             <div class="exam-card-img">
                                                                 <img src='./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png' alt=''>
                                                             </div>
                                                             <div class="price-line">
-                                                                <span>Ödəniş <strong><?php echo $ecek['qiymet']; ?> AZN</strong> </span>
+                                                                <span>Ödəniş: <strong><?php echo $ecek['qiymet']; ?> AZN</strong> </span>
                                                             </div>
                                                             <div class="exam-card-footer">
                                                                 <strong> <?php echo $ecek['basliq']; ?></strong>
                                                                 <div class="exam-date">
-                                                                    <span> <?php echo $ecek['tarix']; ?></span>
-                                                                    <span><?php echo $ecek['tarix1']; ?></span>
+                                                                    <span>Tarix: <?php echo $ecek['tarix']; ?></span>
+                                                                    <span><?php echo $ecek['saat']; ?></span>
                                                                 </div>
                                                             </div>
                                                         </div>

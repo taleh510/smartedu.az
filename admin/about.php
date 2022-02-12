@@ -4,7 +4,6 @@ $aboutsorus = $db->prepare("SELECT * FROM se_about where a_id=:a_id");
 $aboutsorus->execute(['a_id' => "0"]);
 
 $aboutcek = $aboutsorus->fetch(PDO::FETCH_ASSOC);
-
 ?>
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
 

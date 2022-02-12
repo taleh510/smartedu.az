@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 
-header("location:sign-in?status=exit");
+header("location:index?status=exit");
 ?>

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="./resources/css/responsive.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+
+    <title>EduSmart-Sınaq İmtahanı</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header>
+        <div class="container">
+            <div class="row navg">
+                <div class="col-lg-4">
+                    <a href="index.html">
+                        <div class="logo-img">
+                            <img src="./resources/img/Group 180.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header-item">
+                        <!-- <button><i class="far fa-wallet"></i> Balansım</button> -->
+                        <button id="toggle">
+                            <div class="profile-img">
+                                <div class="p-img">
+                                    <img src="./resources/img/profile-img-1.jpg" alt="">
+                                </div>
+                                <span>Nəzrin Əliyeva</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Side Bar Start -->
+    <nav class="menu-left menu-left-open">
+        <section id="Profile">
+            <div class="row profile">
+                <div class="col-lg-12">
+                    <div class="exit-ic">
+                        <button> Cıxış<i class="fas fa-sign-out-alt"></i></button>
+                    </div>
+                    <div class="diss-b">
+                        <button id="toggl"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-img">
+                            <img src="./resources/img/profile-img-1.jpg" alt="">
+                        </div>
+                        <div class="edit-btn">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#edit"><i
+                                    class="far fa-pen"></i> Editle</button>
+                            <button class="balance" type="button" data-bs-toggle="modal" data-bs-target="#balance"><i class="far fa-wallet"></i> Balansım <span>0.00</span></button>
+                        </div>
+                        <div class="pr">
+                            <div class="profile-info">
+                                <h4>Ad</h4>
+                                <span>Nəzrin</span>
+                            </div>
+                            <hr>
+                            <div class="profile-info">
+                                <h4>Soyad</h4>
+                                <span>Əliyeva </span>
+                            </div>
+                            <hr>
+                            <div class="profile-info">
+                                <h4>Mail</h4>
+                                <span>hdsdnjsn@mail.ru</span>
+                            </div>
+                            <hr>
+                            <div class="profile-page">
+                                <button class="left-blue-nav" type="button" data-open="content1">
+                                    <input type="radio" id="a25" name="shipping" checked />
+                                    <label for="a25">İmtahanlarım</label>
+                                </button>
+                                <button class="left-blue-nav" type="button" data-open="content2">
+                                    <input type="radio" id="a50" name="shipping" />
+                                    <label for="a50">Nəticələrim</label>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </nav>
+    <!-- Side Bar End -->
+
+    <!-- Modal edit Start -->
+    <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="dr">
+                        <img src="./resources/img/Group 74.svg" alt="">
+                        <h3>Redakte Et</h3>
+                    </div>
+                    <div class="br">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="">Ad</label>
+                        <input type="text" name="" id="" placeholder="Ad">
+                        <label for="">Soyad</label>
+                        <input type="text" name="" id="" placeholder="Soyad">
+                        <label for="">E-mail</label>
+                        <input type="email" name="" id="" placeholder="E-mail">
+                        <label for="">Şifrə</label>
+                        <input type="password" name="" id="" placeholder="Şifrə">
+                        <label for="">Nömrə</label>
+                        <input type="number" name="" id="" placeholder="Nömrə">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Yadda Saxla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal edit End -->
+
+    <!-- Modal balance Start -->
+    <div class="modal fade" id="balance" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="dr">
+                        <img src="./resources/img/Group 74.svg" alt="">
+                        <h3>Balansı Artır</h3>
+                    </div>
+                    <div class="br">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="total-balance">
+                        <h4>Cari balans: <span>0 azn</span></h4>
+                    </div>
+                    <form action="">
+                        <label for="">Məbləğ (azn) </label>
+                        <div class="b-i">
+                            <input type="text" name="" id="" placeholder="1-100 azn">
+                            <button>Ödəniş et</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Daxil ol</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal balance End -->
+
+
+
+
+
+    <!-- Exam Card Start -->
+    <section id="Exam">
+        <div class="container">
+            <div class="extra" id="content1">
+                <!-- Title Page Start -->
+                <div class="container">
+                    <div class="row my-4 " style="text-align: center; color: #364A81;">
+                        <div class="col-lg-12">
+                            <div class="title">
+                                <h2>İMTAHANLARIM</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Title Page End -->
+                <div class="row my-5">
+                    <div class="row mb-2 exam-top">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="total-number">
+                                <span>Ümumi imtahan sayı: 12 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/Rectangle 434.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/Rectangle 434.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="exam-start.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="extra" id="content2" style="display: block;">
+                <!-- Title Page Start -->
+                <div class="container">
+                    <div class="row my-4 " style="text-align: center; color: #364A81;">
+                        <div class="col-lg-12">
+                            <div class="title">
+                                <h2>NƏTİCƏLƏRİM</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Title Page End -->
+                <div class="row my-5">
+                    <div class="row mb-2 exam-top">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="total-number">
+                                <span>Ümumi imtahan sayı: 12 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="result.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="result.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="result.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="result.html">
+                            <div class="exam-card">
+                                <div class="exam-card-img">
+                                    <img src="./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png" alt="">
+                                </div>
+                                <div class="price-line">
+                                    <span>Ödəniş <strong> 5.00 azn</strong> </span>
+                                </div>
+                                <div class="exam-card-footer">
+                                    <strong>11-ci sinif buraxılış imtahanı</strong>
+                                    <div class="exam-date">
+                                        <span>12.09.2021</span>
+                                        <span>13:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-box">
+                        <div class="logo-footer">
+                            <img src="./resources/img/Group 77 (1).svg" alt="">
+                        </div>
+                        <div class="power-by">
+                            <span> Powered by Deirvlon Technologies <br>
+                                www.deirvlon.com</span>
+                        </div>
+                        <div class="contact-me">
+                            <span>Bizimlə Əlaqə</span>
+                            <span><i class="fab fa-whatsapp"></i> +994 55 639 49 54</span>
+                        </div>
+                        <div class="copywriter">
+                            <span>Copyright © 2021 Deirvlon Technologies. All rights are reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./resources/js/app.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
+    
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +19,7 @@
     />
     <link rel="stylesheet" href="./resources/css/responsive.css" />
     <link rel="stylesheet" href="./resources/css/style.css" />
-
+   
     <title>EduSmart-Sınaq İmtahanı</title>
   </head>
 
@@ -62,17 +63,22 @@
     <section id="register">
       <div class="container">
         <div class="row my-5 register">
-          <form action="admin/netting/process" method="post">
+          <form action="admin/netting/process" name="regform" id="regform" onsubmit="return validateregister()" method="get">
             <label for="">Ad</label>
-            <input type="text" name="ad" id="" placeholder="Ad" />
+            <input type="text" name="ad" id="ad" placeholder="Ad" />
             <label for="">Soyad</label>
-            <input type="text" name="soyad" placeholder="Soyad" />
+            <input type="text" name="soyad" id="soyad"  placeholder="Soyad" />
             <label for="">E-mail</label>
-            <input type="email" name="mail" placeholder="E-mail" />
+            <input type="email" name="mail" id="mail" placeholder="E-mail" />
             <label for="">Telefon</label>
-            <input type="number" name="nomre" placeholder="Telefon" />
+            <input type="number" name="nomre" id="nomre" placeholder="Telefon" />
             <label for="">Şifrə</label>
-            <input type="password" name="sifre" placeholder="Şifrə" />
+            <input type="password" name="sifre"  id="sifre" placeholder="Şifrə" />
+            <?php if(isset($_GET['buistifadeciartiqmovcuddur'])){?>
+              <div class="alert alert-danger" role="alert">
+              Bu istifadəçi artıq mövcuddur.
+            </div>
+            <?php } ?>
             <div class="sign-in-btn">
               <button type="submit" name="qeydiyyat">Yadda saxla</button>
             </div>

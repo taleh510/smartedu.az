@@ -1,3 +1,10 @@
+<?php
+ob_start();
+// session_start();
+include 'admin/netting/connect.php';
+
+?>
+
 <!doctype html>
 <html lang="en">
 

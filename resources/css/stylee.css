@@ -1,59 +1,73 @@
 /* Header Start */
-a{
-  text-decoration: none;
+
+a {
+    text-decoration: none;
 }
 
-header{
+header {
     background: linear-gradient(180deg, rgba(5, 156, 237, 0.81) 0%, rgba(67, 188, 253, 0.81) 112.59%);
     padding: 20px 0;
 }
-header .navg{
+
+header .navg {
     display: flex;
     align-items: center;
 }
-header .logo-img img{
+
+header .logo-img img {
     width: 100%;
 }
-header .header-item{
+
+header .header-item {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-header .header-item button{
+
+header .header-item button {
     border: none;
     border-radius: 16px;
     padding: 10px 20px;
     margin: 0 20px;
 }
+
 header .profile-img {
     display: flex;
     align-items: center;
 }
-header .profile-img  .p-img{
+
+header .profile-img .p-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
-header .profile-img  .p-img img{
+
+header .profile-img .p-img img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
-header .profile-img span{
+
+header .profile-img span {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin: 0 10px;
 }
+
+
 /* Header End */
 
+
 /* Result Section style start */
-.results{
+
+.results {
     width: 100%;
     height: auto;
     padding: 20px 0 40px 0;
 }
-.result-heading h1{
+
+.result-heading h1 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -63,13 +77,15 @@ header .profile-img span{
     margin-bottom: 0;
     text-align: center;
 }
+
 .students-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.students-name h4{
+
+.students-name h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -78,7 +94,8 @@ header .profile-img span{
     padding-top: 27px;
     color: #364A81;
 }
-.students-name p{
+
+.students-name p {
     margin-bottom: 0;
     padding-top: 21px;
     font-family: TT Fors;
@@ -88,27 +105,32 @@ header .profile-img span{
     line-height: 49px;
     color: #18BDF6;
 }
-.search{
+
+.search {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
 }
-.for-search{
+
+.for-search {
     border: 0.4px solid #18BDF6;
     box-sizing: border-box;
     border-radius: 14px;
     padding: 10px;
-    margin-right:38px;
+    margin-right: 38px;
 }
-.for-search i{
+
+.for-search i {
     color: #A8E6FC8C;
-    margin:0 6px;
+    margin: 0 6px;
 }
-.for-search input{
+
+.for-search input {
     border: none;
     outline: none;
 }
-.search button{
+
+.search button {
     height: 48px;
     width: 130px;
     background: linear-gradient(180deg, #18BDF6 0%, #18BDF6 100%);
@@ -118,9 +140,9 @@ header .profile-img span{
     border: none;
     font-size: 20px;
     color: #fff;
-
 }
-.for-search input::placeholder{
+
+.for-search input::placeholder {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -129,113 +151,134 @@ header .profile-img span{
     color: rgba(54, 74, 129, 0.21);
 }
 
-  .answers{
+.answers {
     display: flex;
     align-items: center;
     margin-bottom: 39px;
-  }
-  .answer-item{
+}
+
+.answer-item {
     display: flex;
     align-items: center;
-  }
-  .answer-item p{
-      margin-bottom: 0;
-      margin-left: 17px;
-  }
-  .true{
-      width: 30px;
-      height: 30px;
-      border-radius: 50px;
-      border:1px solid #21E7C3;
-      display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .true-answer{
-    width: 20px;
-    height: 20px;
-    background-color:#21E7C3;
-    border-radius: 50px;
-  }
-  .false{
+}
+
+.answer-item p {
+    margin-bottom: 0;
+    margin-left: 17px;
+}
+
+.true {
     width: 30px;
     height: 30px;
     border-radius: 50px;
-    border:1px solid #E72139;
+    border: 1px solid #21E7C3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.true-answer {
+    width: 20px;
+    height: 20px;
+    background-color: #21E7C3;
+    border-radius: 50px;
+}
+
+.false {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #E72139;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 86px;
-  }
-  .false-answer{
+}
+
+.false-answer {
     width: 20px;
     height: 20px;
     background-color: #E72139;
     border-radius: 50px;
-  }
-  /* input[type='radio']:hover {
+}
+
+
+/* input[type='radio']:hover {
     box-shadow:0 0 5px 0px salmon inset;
   } */
-  .answer-group input {
-    -webkit-appearance:none;
+
+.answer-group input {
+    -webkit-appearance: none;
     width: 22px;
-    height:22px;
-    border:1px solid darkgray;
-    border-radius:50%;
-    outline:none;
+    height: 22px;
+    border: 1px solid darkgray;
+    border-radius: 50%;
+    outline: none;
     /* box-shadow:0 0 5px 0px gray inset; */
-  }
-  .answer-group input:before {
-    content:'';
-    display:block;
-    width:70%;
-    height:70%;
-    margin: 15% auto;    
-    border-radius:50%;   
-    
-  }
-  .right-answer:checked {
+}
+
+.answer-group input:before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 70%;
+    margin: 15% auto;
+    border-radius: 50%;
+}
+
+.right-answer:checked {
     border-color: #21E7C3;
-  }
-  .right-answer:checked:before {
-    background: #21E7C3;;
-  }
-  .wrong-answer:checked{
-    border-color:  #E72139;
-  }
-  .wrong-answer:checked:before {
+}
+
+.right-answer:checked:before {
+    background: #21E7C3;
+    ;
+}
+
+.wrong-answer:checked {
+    border-color: #E72139;
+}
+
+.wrong-answer:checked:before {
     background: #E72139 !important;
-  }
-  .answer-number{
-      display: flex;
-  }
-  .answer-number p:nth-child(1){
-      margin-right: 116px;
-  }
-  .answer-number p{
+}
+
+.answer-number {
+    display: flex;
+}
+
+.answer-number p:nth-child(1) {
+    margin-right: 116px;
+}
+
+.answer-number p {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 36px;
     color: #364A81;
-  }
-  .question-cards{
-      width: 100%;
-      height: auto;
-  }
-  .question-card{
+}
+
+.question-cards {
+    width: 100%;
+    height: auto;
+}
+
+.question-card {
     background: #FFFFFF;
     border: 1px solid rgba(183, 180, 180, 0.65);
     box-sizing: border-box;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
     margin-bottom: 60px;
-  }
-  .question-content{
-      padding: 41px 55px;
-  }
-  .question h4{
+}
+
+.question-content {
+    padding: 41px 55px;
+}
+
+.question h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -243,112 +286,140 @@ header .profile-img span{
     line-height: 36px;
     color: #364A81;
     margin-bottom: 0;
-  }
-  .question p{
+}
+
+.question p {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
     line-height: 34px;
     color: #364A81;
-  }
-  .questions-answer{
+}
+
+.questions-answer {
     margin-bottom: 31px;
-  }
-  .questions-answer h4{
+}
+
+.questions-answer h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
     color: #18BDF6;
-  }
-  .q-answers{
-      display:flex;
-  }
-  .answer-group{
-    display:flex;
+}
+
+.q-answers {
+    display: flex;
     align-items: center;
-  }
-  .answer-group p{
-      margin-right: 52px;
-      margin-bottom:0;
-  }
-  .answer-group input{
-      margin-right: 5px;
-  }
-  .explanation h4{
+    justify-content: center;
+}
+
+.answer-group {
+    display: flex;
+    align-items: center;
+}
+
+.answer-group p {
+    margin-right: 52px;
+    margin-bottom: 0;
+}
+
+.answer-group input {
+    margin-right: 5px;
+}
+
+.explanation h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
     color: #D90467;
-  }
-  .explain{
+}
+
+.explain {
     /* height: 131px; */
     height: auto;
     border: 0.4px solid #888282;
     box-sizing: border-box;
     border-radius: 14px;
-  }
-  .explain-content{
-      padding: 17px;
-  }
-  .explain-content p{
+}
+
+.explain-content {
+    padding: 17px;
+}
+
+.explain-content p {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
     color: #364A81;
-  }
-  .open-answer{
+}
+
+.open-answer {
     /* height: 131px; */
     height: auto;
     border: 0.4px solid #888282;
     box-sizing: border-box;
     border-radius: 14px;
-  }
-  .open-answer-content{
-      padding: 17px;
-  }
-  .open-answer-content p{
+}
+
+.open-answer-content {
+    padding: 17px;
+}
+
+.open-answer-content p {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 34px;
     color: #364A81;
-  }
-  .video-question{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-  }
-  .voice-question audio{
-      width: 100%;
-  }
-  .match{
-      display: flex;
-      margin: 58px 0;
-  }
-  .left-side{
-      margin-right: 150px;
-  }
+}
 
-  /* Result Section style start */
+.video-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.voice-question img {
+    width: 100%;
+    height: 100%;
+}
+
+.voice-question audio {
+    width: 100%;
+}
+
+.match {
+    display: flex;
+    margin: 58px 0;
+}
+
+.left-side {
+    margin-right: 150px;
+}
 
 
-  /* Test page style */
-.exam-info{
+/* Result Section style start */
+
+
+/* Test page style */
+
+.exam-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.test-head p{
+
+.test-head p {
     font-family: TT Fors;
     font-style: normal;
     font-weight: 500;
@@ -356,7 +427,8 @@ header .profile-img span{
     line-height: 36px;
     color: #18BDF6;
 }
-.notes h4{
+
+.notes h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -364,7 +436,8 @@ header .profile-img span{
     line-height: 34px;
     color: #364A81;
 }
-.note-content textarea{
+
+.note-content textarea {
     width: 100%;
     height: 70px;
     border: 0.4px solid #888282;
@@ -374,7 +447,8 @@ header .profile-img span{
     padding: 10px;
     outline: none;
 }
-.open-question-content textarea{
+
+.open-question-content textarea {
     width: 100%;
     height: 225px;
     left: 170px;
@@ -386,7 +460,8 @@ header .profile-img span{
     outline: none;
     resize: none;
 }
-.open-questions h4{
+
+.open-questions h4 {
     font-family: TT Fors;
     font-style: normal;
     font-weight: normal;
@@ -394,11 +469,13 @@ header .profile-img span{
     line-height: 34px;
     color: #364A81;
 }
-.result-btn{
+
+.result-btn {
     display: flex;
     justify-content: flex-end;
 }
-.result-btn button{
+
+.result-btn button {
     height: 48px;
     width: 200px;
     background: linear-gradient(180deg, #18BDF6 0%, #18BDF6 100%);
@@ -409,47 +486,43 @@ header .profile-img span{
     font-size: 20px;
     color: #fff;
 }
+
 .test-answer-group {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
 }
-.test-answer{
+
+.test-answer {
     width: 22px;
-    height:22px;
-    border:1px solid #21E7C3 !important;
-    border-radius:50%;
-    outline:none;
+    height: 22px;
+    border: 1px solid #21E7C3 !important;
+    border-radius: 50%;
+    outline: none;
     margin-right: 10px;
 }
-  
+
 .test-answer:before {
-    content:'';
-    display:block;
-    width:60%;
-    height:60%;
-    margin: 20% auto;    
-    border-radius:50%;    
-  }
-  .test-answer:checked {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+.test-answer:checked {
     border-color: #21E7C3;
-  }
-  .test-answer:checked::before{
+}
+
+.test-answer:checked::before {
     background: #21E7C3;
-  }
-.voice-question audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
-    background-color:  rgba(183, 180, 180, 0.65);
+}
+
+.voice-question audio::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel {
+    background-color: rgba(183, 180, 180, 0.65);
     box-sizing: border-box;
     box-shadow: 0px 4px 15px rgb(0 0 0 / 10%) !important;
 }
-
-
-
-
-
-
-
-
-
-

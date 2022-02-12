@@ -401,9 +401,11 @@ header .navg .header-item #toggle{
 
 #Profile .profile .profile-content{
     display: flex;
+    height: 400px;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+    overflow-y: scroll;
 }
 #Profile .profile .diss-b{
     display: flex;

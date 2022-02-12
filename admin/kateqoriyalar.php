@@ -28,8 +28,8 @@ $kateqoriyasorus->execute();
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">İstifadəçilərin siyahısı</h6>
+        <div class="card-header py-3" style="display: flex; justify-content:space-between; align-items:center;">
+            <h6 class="m-0 font-weight-bold text-primary" style="font-size:18px;">İstifadəçilərin siyahısı</h6>
 
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
                 Əlavə et
@@ -73,10 +73,14 @@ $kateqoriyasorus->execute();
                                 <form method="post" action="netting/process?k_id=<?php echo $kateqoriyacek['k_id']; ?>">
                                     <td><input type="text" class="form-control form-control-user" name="kad" placeholder="C" value="<?php echo $kateqoriyacek['k_ad']; ?>"></td>
                                     <td>
-                                        <button type="submit" class="btn btn-primary btn-sm px-4" name="kedit">Düzəliş</button>
+                                        <div class="edit-btn" style="display: flex; align-items: center; justify-content: center;">
+                                            <button type="submit" class="btn btn-primary btn-sm px-4" name="kedit">Düzəliş</button>
+                                        </div>
                                     </td>
                                     <td>
-                                        <button type="submit" class="btn btn-danger btn-sm px-4" name="ksil">Sil</button>
+                                        <div class="edit-btn" style="display: flex; align-items: center; justify-content: center;">
+                                            <button type="submit" class="btn btn-danger btn-sm px-4" name="ksil">Sil</button>
+                                        </div>
                                     </td>
                                 </form>
                             </tr>

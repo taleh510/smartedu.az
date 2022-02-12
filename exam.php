@@ -1,6 +1,9 @@
 <?php
-session_start();
-
+if (session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+} else {
+    session_destroy();
+}
 if (empty($_SESSION['mail0'])) {
     include('h3.php');
 } else {
@@ -15,13 +18,14 @@ if (empty($_SESSION['mail0'])) {
 if (isset($_GET['axtar'])) {
     $kserc = $_GET['kserc'];
     $nserc = $_GET['nserc'];
-    if ($kserc == "Kateqoriya" and $nserc == "Nəşriyyatçı") {
+    $axtar = $_GET['axtar'];
+    if ($kserc == "Kateqoriya" and $nserc == "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam");
-    } elseif ($kserc != "Kateqoriya" and $nserc != "Nəşriyyatçı") {
+    } elseif ($kserc != "Kateqoriya" and $nserc != "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where nesriyyatci like '%$nserc%' and kateqoriya like '%$kserc%' ");
-    } elseif ($kserc != "Kateqoriya" and $nserc == "Nəşriyyatçı") {
+    } elseif ($kserc != "Kateqoriya" and $nserc == "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where kateqoriya like '%$kserc%' ");
-    } elseif ($kserc == "Kateqoriya" and $nserc != "Nəşriyyatçı") {
+    } elseif ($kserc == "Kateqoriya" and $nserc != "Nəşriyyatçı" or $axtar == "0") {
         $exsorus = $db->prepare("SELECT * FROM se_exam where nesriyyatci like '%$nserc%' ");
     }
     $exsorus->execute();
@@ -53,7 +57,7 @@ if (isset($_GET['axtar'])) {
                         <?php while ($ecek = $exsorus->fetch(PDO::FETCH_ASSOC)) { ?>
 
                             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                                <a href="exam-info">
+                                <a href="exam-info?e_id=<?php echo $ecek['e_id']; ?>">
                                     <div class="exam-card">
                                         <div class="exam-card-img">
                                             <img src='./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png' alt=''>
@@ -64,8 +68,8 @@ if (isset($_GET['axtar'])) {
                                         <div class="exam-card-footer">
                                             <strong> <?php echo $ecek['basliq']; ?></strong>
                                             <div class="exam-date">
-                                                <span> <?php echo $ecek['tarix']; ?></span>
-                                                <span><?php echo $ecek['tarix1']; ?></span>
+                                                <span>Tarix: <?php echo $ecek['tarix']; ?></span>
+                                                <span><?php echo $ecek['tarix1']; ?> Dəqiqə</span>
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +108,7 @@ if (isset($_GET['axtar'])) {
                                             <?php while ($ecek = $exsorus->fetch(PDO::FETCH_ASSOC)) { ?>
 
                                                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                                                    <a href="exam-info">
+                                                    <a href="exam-info?e_id=<?php echo $ecek['e_id']; ?>">
                                                         <div class="exam-card">
                                                             <div class="exam-card-img">
                                                                 <img src='./resources/img/jeshoots-com--2vD8lIhdnw-unsplash 1.png' alt=''>
@@ -115,8 +119,8 @@ if (isset($_GET['axtar'])) {
                                                             <div class="exam-card-footer">
                                                                 <strong> <?php echo $ecek['basliq']; ?></strong>
                                                                 <div class="exam-date">
-                                                                    <span> <?php echo $ecek['tarix']; ?></span>
-                                                                    <span><?php echo $ecek['tarix1']; ?></span>
+                                                                    <span>Tarix: <?php echo $ecek['tarix']; ?></span>
+                                                                    <span>|  <?php echo $ecek['tarix1']; ?> dəqiqə</span>
                                                                 </div>
                                                             </div>
                                                         </div>

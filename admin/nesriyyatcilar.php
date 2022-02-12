@@ -6,18 +6,33 @@ $nsorus->execute();
 ?>
 
 <script>
-    $(document).ready(function() {$('#dataTable').DataTable({language: {url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Azerbaijan.json',},dom: 'Bfrtip',buttons: ['copy', 'csv', 'excel', 'print',{extend: 'pdfHtml5',orientation: 'landscape',pageSize: 'LEGAL'}],select: true,});});
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Azerbaijan.json',
+            },
+            dom: 'Bfrtip',
+            buttons: ['copy', 'csv', 'excel', 'print', {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'LEGAL'
+            }],
+            select: true,
+        });
+    });
 </script>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Nəşriyyatçıların siyahısı</h6>
+        <div class="card-header py-3" style="    display: flex; justify-content: space-between;">
+            <h6 style="display: flex; align-items: center; font-size: 18px;" class="m-0 font-weight-bold text-primary">Nəşriyyatçıların siyahısı</h6>
+            <div class="add-btn">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    Əlavə et
+                </button>
+            </div>
 
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                Əlavə et
-            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -54,13 +69,17 @@ $nsorus->execute();
                     <tbody>
                         <?php while ($ncek = $nsorus->fetch(PDO::FETCH_ASSOC)) { ?>
                             <tr>
-                                <form method="post" action="netting/process?n_id=<?php echo $ncek['n_id'];?>">
+                                <form method="post" action="netting/process?n_id=<?php echo $ncek['n_id']; ?>">
                                     <td><input type="text" class="form-control form-control-user" name="nad" placeholder="C" value="<?php echo $ncek['n_ad']; ?>"></td>
                                     <td>
-                                        <button type="submit" class="btn btn-primary btn-sm px-4" name="nedit">Düzəliş</button>
+                                        <div class="edit-btn" style="display: flex; align-items: center; justify-content: center;">
+                                            <button type="submit" class="btn btn-primary btn-sm px-4" name="nedit">Düzəliş</button>
+                                        </div>
                                     </td>
                                     <td>
-                                        <button type="submit" class="btn btn-danger btn-sm px-4" name="nsil">Sil</button>
+                                        <div class="edit-btn" style="display: flex; align-items: center; justify-content: center;">
+                                            <button type="submit" class="btn btn-danger btn-sm px-4" name="nsil">Sil</button>
+                                        </div>
                                     </td>
                                 </form>
                             </tr>

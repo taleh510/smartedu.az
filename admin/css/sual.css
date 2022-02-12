@@ -1,0 +1,38 @@
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+.exam-boxs{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    column-gap: 20px !important;
+    row-gap: 20px !important;
+  }
+  .exam-box{
+    width: 100%;
+    height: 90px;
+    background-color: #496edb;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10%;
+  }
+  .exam-head{
+    display: flex;
+    align-items: center;
+  }
+  .exam-head i{
+      margin-right: 10px;
+      font-size: 18px;
+  }
+  .exam-head h4{
+      margin: 0;
+  }
+  .exam-explanation p{
+      margin: 0;
+  }

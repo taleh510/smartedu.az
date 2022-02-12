@@ -1,168 +1,181 @@
 @media screen and (max-width:992px) {
     .answer-group p {
-      margin-right: 30px;
-      margin-bottom: 0;
-  }
-  .result-heading h1 {
-    font-size: 33px;
-  }
-  .test-head p {
-    font-size: 23px;
-  }
-  .students-name h4 {
-    font-size: 23px;
-  }
-  .search button {
-    height: 44px;
-    width: 120px;
-    font-size: 18px;
-  }
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+    .result-heading h1 {
+        font-size: 33px;
+    }
+    .test-head p {
+        font-size: 23px;
+    }
+    .students-name h4 {
+        font-size: 23px;
+    }
+    .search button {
+        height: 44px;
+        width: 120px;
+        font-size: 18px;
+    }
     .for-search {
-      border-radius: 14px;
-      padding: 9px;
-      margin-right: 30px;
-  }
+        border-radius: 14px;
+        padding: 9px;
+        margin-right: 30px;
+    }
 }
+
 @media screen and (max-width:768px) {
-  .result-heading h1 {
-    font-size: 31px;
-  }
-  .exam-info{
-    flex-direction: column;
-  }
-  .students-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .q-answers {
-    display: flex;
-    flex-direction: column;
-  }
-  .answer-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  .video-question{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
-  }
-  /* result page */
-  .students-name p {
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 35px;
+    .result-heading h1 {
+        font-size: 31px;
+    }
+    .test-answer-group label {
+        width: 90%;
+    }
+    .test-answer::before {
+        display: none!important;
+    }
+    .test-answer {
+        width: 10%;
+        height: 20px;
+        outline: none;
+    }
+    .exam-info {
+        flex-direction: column;
+    }
+    .students-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .q-answers {
+        display: flex;
+        flex-direction: column;
+    }
+    .answer-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .video-question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+    /* result page */
+    .students-name p {
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .students-name {
+        display: flex;
+        flex-direction: column;
+    }
+    .students-name h4 {
+        font-size: 26px;
+        line-height: 10px;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .answers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .answer-number {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .answer-number p:nth-child(1) {
+        margin-right: 0;
+    }
+    .video-question video {
+        width: 100%;
+    }
+    .voice-question {
+        width: 100%;
+    }
 }
-.students-name {
-  display: flex;
-  flex-direction: column;
-}
-.students-name h4 {
-  font-size: 26px;
-  line-height: 10px;
-}
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-.answers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.answer-number {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.answer-number p:nth-child(1) {
-  margin-right: 0;
-}
-.video-question video{
-  width: 100%;
-}
-.voice-question{
-  width: 100%;
-}
-}
+
 @media screen and (max-width:500px) {
-  .left-side {
-    margin-right: 85px;
-  }
-  .question-content {
-    padding: 30px 20px;
-  }
-  .question p {
-    font-size: 20px;
-  }
-  .open-questions h4 {
-    font-size: 22px;
-  } 
-  .question h4 {
-    font-size: 24px;
-  }
-  .notes h4 {
-    font-size: 22px;
-  }
-  .test-head p {
-    font-size: 21px;
-    line-height: 30px;
-  }
-  .for-search input::placeholder{
-    font-family: TT Fors;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 28px;
-    color: rgba(54, 74, 129, 0.21);
-}
-.for-search i{
-  color: #A8E6FC8C;
-  margin:0 3px;
-}
-.for-search input {
-  border: none;
-  outline: none;
-  width: 100%;
-}
-.for-search{
-    display: flex;
-    align-items: center;
-    width: 180px;
-    border-radius: 14px;
-    padding: 9px;
-    margin-right: 13px;
-  }
-  .search button {
-    height: 44px;
-    width: 100px;
-    font-size: 18px;
-  }
-  .result-btn button {
-    height: 44px;
-    width: 150px;
-    font-size: 18px;
-}
-.wrong-answer {
-  margin-left: 21px;
-}
-.answer-item p {
-  margin-bottom: 0;
-  margin-left: 4px;
-}
-.answer-number p {
-  font-family: TT Fors;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 23px;
-  line-height: 26px;
-}
+    .left-side {
+        margin-right: 85px;
+    }
+    .question-content {
+        padding: 30px 20px;
+    }
+    .question p {
+        font-size: 20px;
+    }
+    .open-questions h4 {
+        font-size: 22px;
+    }
+    .question h4 {
+        font-size: 24px;
+    }
+    .notes h4 {
+        font-size: 22px;
+    }
+    .test-head p {
+        font-size: 21px;
+        line-height: 30px;
+    }
+    .for-search input::placeholder {
+        font-family: TT Fors;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 28px;
+        color: rgba(54, 74, 129, 0.21);
+    }
+    .for-search i {
+        color: #A8E6FC8C;
+        margin: 0 3px;
+    }
+    .for-search input {
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .for-search {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        border-radius: 14px;
+        padding: 9px;
+        margin-right: 13px;
+    }
+    .search button {
+        height: 44px;
+        width: 100px;
+        font-size: 18px;
+    }
+    .result-btn button {
+        height: 44px;
+        width: 150px;
+        font-size: 18px;
+    }
+    .wrong-answer {
+        margin-left: 21px;
+    }
+    .answer-item p {
+        margin-bottom: 0;
+        margin-left: 4px;
+    }
+    .answer-number p {
+        font-family: TT Fors;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 26px;
+    }
 }

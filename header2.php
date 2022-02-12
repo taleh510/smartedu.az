@@ -2,10 +2,16 @@
 ob_start();
 session_start();
 include 'admin/netting/connect.php';
-$usersor = $db->prepare("SELECT * FROM se_all_users where mail=:mail");
-$usersor->execute(array('mail'=>$_SESSION['mail0']));
-$usercek = $usersor->fetch(PDO::FETCH_ASSOC);
+$us = $db->prepare("SELECT * FROM se_all_users where mail=:mail");
+$us->execute(array('mail'=>$_SESSION['mail0']));
+$uc = $us->fetch(PDO::FETCH_ASSOC);
  if($_SESSION['mail0']==''){header("Location: ./");}
+
+$mmail=$uc['mail'];
+if($uc['vstts']=="no"){
+    header("Location: vertification?m=$mmail");
+}
+else{
 ?>
 
 
@@ -43,13 +49,13 @@ $usercek = $usersor->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="col-lg-8">
                     <div class="header-item">
-                        <button class="balance" type="button" data-bs-toggle="modal" data-bs-target="#balance"><i class="far fa-wallet"></i> Balansım <span><?php echo $usercek['balans'] ?></span></button>
+                        <button class="balance" type="button" data-bs-toggle="modal" data-bs-target="#balance"><i class="far fa-wallet"></i> Balansım <span><?php echo $uc['balans'] ?> ₼</span></button>
                         <a href="profile">
                             <div class="profile-img">
                                 <div class="p-img">
                                     <img src="./resources/img/profile-img-1.jpg" alt="">
                                 </div>
-                                <span><?php echo $usercek['ad']." ".$usercek['soyad'];?></span>
+                                <span><?php echo $uc['ad']." ".$uc['soyad'];?></span>
                             </div>
                         </a>
                     </div>
@@ -57,3 +63,31 @@ $usercek = $usersor->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </header>
+    <div class="modal fade" id="balance" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="dr">
+                    <img src="./resources/img/Group 74.svg" alt="">
+                    <h3>Balansı Artır</h3>
+                </div>
+                <div class="br">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="total-balance">
+                    <h4>Cari balans: <span><?php echo $uc['balans'];?> AZN</span></h4>
+                </div>
+                <form action="">
+                    <label for="">Məbləğ (azn) </label>
+                    <div class="b-i">
+                        <input type="text" name="" id="" placeholder="1-100 azn">
+                        <button>Ödəniş et</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><?php } ?>

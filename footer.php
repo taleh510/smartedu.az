@@ -15,7 +15,7 @@ $ab0 = $ab1->fetch(PDO::FETCH_ASSOC);?>
                         </div>
                         <div class="power-by">
                             <span> Powered by Deirvlon Technologies <br>
-                               <?php echo $ab0['sayt']?></span>
+                             <a   href="https://<?php echo $ab0['sayt']?>"><?php echo $ab0['sayt']?></a>
                         </div>
                         <div class="contact-me">
                             <span>Bizimlə Əlaqə</span>
@@ -30,7 +30,7 @@ $ab0 = $ab1->fetch(PDO::FETCH_ASSOC);?>
         </div>
     </footer>
     <!-- Footer End -->
-
+    <script src="admin/js/jbvalidator.js"></script>
     <script src="./resources/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="./resources/css/responsive.css">
     <link rel="stylesheet" href="./resources/css/style.css">
-
+    <script src="admin/js/jbvalidator.js"></script>
     <title>EduSmart-Sınaq İmtahanı</title>
 </head>
 
@@ -48,17 +47,20 @@
     <section id="register">
         <div class="container">
             <div class="row my-5 register">
-                <form action="admin/netting/process" method="post">
+                <form action="admin/netting/process" name="signin" id="signin" onsubmit="return validatesignin()" method="get">
                     <label for="">E-mail</label>
-                    <input type="email" name="mail" placeholder="E-mail">
+                    <input type="email" name="mail" id="mail" placeholder="E-mail">
                     <label for="">Şifrə</label>
-                    <input type="password" name="sifre" placeholder="Şifrə">
-                    <div class="sign-in-btn">
+                    <input type="password" name="sifre" id="sifre" placeholder="Şifrə">
+                    <div class="sign-in-btn" id = "sign-in-btn">
                         <button type="submit" name="daxilol">Daxil ol</button>
                     </div>
                 </form>
                 <div class="sign-in-href">
                     <span>Saytımıza birinci dəfə daxil olmusunuz?<a href="register">Qeydiyyatdan keçin</a></span>
+                </div>
+                <div class="forget-password" style="    display: flex; color:#364a81; align-items: center; justify-content: center;">
+                    <a href="forgot-password">Şifrənizi unutmusunuz?</a>
                 </div>
 
             </div>
